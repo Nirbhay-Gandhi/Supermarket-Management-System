@@ -18,3 +18,12 @@ Supermarket consists of an inventory of products, managed by their local staff. 
 <b>KTLO work</b>
 - Check for bugs, for each api whether its working correctly. check for ebd-to-end flow for each api
 - change the layout
+- problem with product list(showInventory) not getting updated, include hasCode() function
+  @Override
+	public int hashCode() {
+    	return product_name.hashCode();
+  }
+- HashCode()
+  https://github.com/Nirbhay-Gandhi/Supermarket-Management-System/blob/main/Docs/About%20HashCode().md 
+
+
