@@ -1,5 +1,8 @@
 package com.dao;
 
+import com.Interface.OwnerDaoIntf;
+import com.Interface.StaffDaoIntf;
+
 public class Factory {
 	
 	public static StaffDaoIntf getStaffDaoImpl() {

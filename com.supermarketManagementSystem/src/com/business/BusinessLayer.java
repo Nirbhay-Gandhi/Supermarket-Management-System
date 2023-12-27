@@ -9,10 +9,10 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+import com.Interface.OwnerDaoIntf;
+import com.Interface.StaffDaoIntf;
 import com.dao.OwnerDaoImpl;
-import com.dao.OwnerDaoIntf;
 import com.dao.StaffDaoImpl;
-import com.dao.StaffDaoIntf;
 import com.modals.Bill;
 import com.modals.Cart;
 import com.modals.LocalStaff;

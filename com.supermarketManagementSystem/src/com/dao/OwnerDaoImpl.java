@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.Interface.OwnerDaoIntf;
 import com.modals.Bill;
 import com.modals.Cart;
 import com.modals.LocalStaff;
