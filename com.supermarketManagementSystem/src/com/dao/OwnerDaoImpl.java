@@ -79,6 +79,7 @@ public class OwnerDaoImpl extends StaffDaoImpl implements OwnerDaoIntf{
 		return null;
 	}
 
+	@Override
 	public Set<String> viewStaffsWrtOperation(String operation) {
 		Set<String> staffPerformDesiredOpern = new LinkedHashSet<>();
 		
@@ -107,5 +108,29 @@ public class OwnerDaoImpl extends StaffDaoImpl implements OwnerDaoIntf{
 			}
 		}
 		return staffPerformDesiredOpern;
+	}
+	
+	@Override
+	public Map<String, Set<String>> getCustomersBillInfo() {
+		return ds.customerBillInfo;
+	}
+	
+	@Override
+	public Set<String> getPerticularCustomersBillInfo(String custMob) {
+		Set< Map.Entry<String, Set<String>> > entrySet = ds.customerBillInfo.entrySet();
+		Iterator<Map.Entry<String, Set<String>>> itr = entrySet.iterator();
+		
+		Set<String> ansSet =null;
+		
+		while(itr.hasNext())
+		{
+			Map.Entry<String, Set<String>> entry = itr.next();
+			if(entry.getKey().equals(custMob)) {
+				ansSet = entry.getValue();
+				break;
+			}
+		}
+		
+		return ansSet;
 	}
 }

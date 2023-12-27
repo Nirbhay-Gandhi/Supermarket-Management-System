@@ -20,13 +20,13 @@ public class Product implements Comparable<Product>{
 		this.pricePerProduct = pricePerProduct;
 	}
 	
-	public Product(String product_name, String brand, LocalDate expdate, double pricePerProduct) {
-		super();
-		this.product_name = product_name;
-		this.brand = brand;
-		this.expdate = expdate;
-		this.pricePerProduct = pricePerProduct;
-	}
+//	public Product(String product_name, String brand, LocalDate expdate, double pricePerProduct) {
+//		super();
+//		this.product_name = product_name;
+//		this.brand = brand;
+//		this.expdate = expdate;
+//		this.pricePerProduct = pricePerProduct;
+//	}
 
 	public String getProduct_id() {
 		return product_id;

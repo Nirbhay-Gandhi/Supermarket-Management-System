@@ -4,13 +4,13 @@ import com.dao.DataStructures;
 
 public class HelperFunctions {
 	
-	static DataStructures ds;
+	private DataStructures ds;
 	
 	public HelperFunctions() {
 		ds = new DataStructures();
 	}
 	
-	public static String generateStaffId() 
+	public String generateStaffId() 
 	{
 		String totalElements = String.valueOf(ds.getStaffInfoSize());
     	String sID = "S";
@@ -24,7 +24,7 @@ public class HelperFunctions {
     	return sID;
     }
 	
-	public static String generateProductId() 
+	public String generateProductId() 
 	{
 		String totalElements = String.valueOf(ds.getProductInventorySize());
 		String pID = "P";
@@ -38,7 +38,7 @@ public class HelperFunctions {
 		return pID;
 	}
 	
-    public static String generateBillId() 
+    public String generateBillId() 
     {
     	//generate bill id based on the Bills Set. If Set<Bills> = {...,B091,B092,} next should be B093
     	

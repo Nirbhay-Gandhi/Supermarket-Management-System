@@ -52,42 +52,48 @@ public class DataStructures {
 		return productInventory;
 	}
 	public int getProductInventorySize() {
-		return productInventory.size();
+		//System.out.println(productInventory.size()); System.out.println(productInventory);
+		return (productInventory == null) ? 0 : productInventory.size();
 	}
 
 	public Map<String, Map<String, List<String>>> getInventoryOpration() {
 		return inventoryOpration;
 	}
 	public int getInventoryOprationSize() {
-		return inventoryOpration.size();
+		//return inventoryOpration.size();
+		return (inventoryOpration == null) ? 0 : inventoryOpration.size();
 	}
 
 	public Map<String, Integer> getProductQuantity() {
 		return productQuantity;
 	}
 	public int getProductQuantitySize() {
-		return productQuantity.size();
+		//return productQuantity.size();
+		return (productQuantity == null) ? 0 : productQuantity.size();
 	}
 
 	public Set<Bill> getBills() {
 		return bills;
 	}
 	public int getBillsSize() {
-		return bills.size();
+		//return bills.size();
+		return (bills == null) ? 0 : bills.size();
 	}
 
 	public Map<String, Set<String>> getCustomerBillInfo() {
 		return customerBillInfo;
 	}
 	public int getCustomerBillInfoSize() {
-		return customerBillInfo.size();
+		//return customerBillInfo.size();
+		return (customerBillInfo == null) ? 0 : customerBillInfo.size();
 	}
 
 	public Set<LocalStaff> getStaffInfo() {
 		return staffInfo;
 	}
 	public int getStaffInfoSize() {
-		return staffInfo.size();
+		//return staffInfo.size();
+		return (staffInfo == null) ? 0 : staffInfo.size();
 	}
 	
 }

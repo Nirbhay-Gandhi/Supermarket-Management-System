@@ -96,6 +96,7 @@ public class StaffDaoImpl implements StaffDaoIntf{
 		{
 			//adding a fresh product
 			ds.productInventory.add(p);	
+			System.out.println("In Dao layer. size: "+ds.productInventory.size());
 		}
 		
 		//update the quantity
@@ -108,17 +109,19 @@ public class StaffDaoImpl implements StaffDaoIntf{
 	@Override
 	public Product getProduct(String pname) {
 		// TODO Auto-generated method stub
+		Product ans = null;
 		if(ds.productInventory.contains(pname)) {
 			Iterator<Product> itr = ds.productInventory.iterator();
 			
 			while(itr.hasNext()) {
 				Product tempProduct = itr.next();
 				if(tempProduct.getProduct_name().equals(pname)) {
-					return tempProduct;
+					ans =  tempProduct;
+					break;
 				}
 			}
 		}
-		return null;
+		return ans;
 	}
 
 	@Override
@@ -163,21 +166,22 @@ public class StaffDaoImpl implements StaffDaoIntf{
 	}
 
 	@Override
-	public Bill genrateBill(String bill_id, LocalDateTime ldt, String staffId, Cart c) {
+	public Bill processBill(String billId,String staffId, LocalDateTime ldt, Cart c, double total) {
 		/* Creating LocalDateTime with the current date and time
            LocalDateTime now = LocalDateTime.now();
            
            Creating LocalDateTime with specific values
            LocalDateTime specificDateTime = LocalDateTime.of(2022, 12, 31, 23, 59, 59);
 		 */
-		Bill b = new Bill(bill_id, staffId, ldt, c);
+		Bill b = new Bill(billId, staffId, ldt, c, total);
 		
 		//update the bills<> collection
 		ds.bills.add(b);
 		
-		return null;
+		return b;
 	}
 
+	@Override
 	public void updateCustomerBillInfo(String cust_id, String bill_d) {
 		
 		if(ds.customerBillInfo.containsKey(cust_id)) {
@@ -191,10 +195,12 @@ public class StaffDaoImpl implements StaffDaoIntf{
 		}
 	}
 
+	@Override
 	public Set<Product> viewProducts() {
 		return ds.productInventory;
 	}
 
+	@Override
 	public boolean updateInventoryIfValid(String productName, int prdQty)
 	{
 		boolean ans = false;

@@ -19,4 +19,7 @@ public interface OwnerDaoIntf{
 	public Set<String> viewStaffsWrtOperation(String operation);
 //	public void viewSpecificOperatedProducts(String operation);
 	
+	public Map<String, Set<String>> getCustomersBillInfo();
+	public Set<String> getPerticularCustomersBillInfo(String custMob);
+	
 }

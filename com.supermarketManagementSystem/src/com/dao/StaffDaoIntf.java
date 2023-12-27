@@ -17,7 +17,7 @@ public interface StaffDaoIntf {
 	
 	public Map<String,Integer> getInventory(); //eg: { [kitkat -> 90], [bisleri -> 100] }
 	
-	public Bill genrateBill(String bill_id, LocalDateTime ldt,String staffId, Cart c);
+	public Bill processBill(String billId,String staffId, LocalDateTime ldt, Cart c, double total);
 	public void updateCustomerBillInfo(String cust_id, String bill_d);
 	
 	public boolean updateInventoryIfValid(String productName, int prdQty);

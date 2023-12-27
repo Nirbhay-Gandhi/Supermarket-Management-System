@@ -9,22 +9,23 @@ public class Bill implements Comparable<Bill>{
 	private String genStaffId;
 	private LocalDateTime dateTime;
 	private Cart smallCart;
-	private int total;
+	private double total;
 	
-	public Bill(String bill_id, String genStaffId, LocalDateTime dateTime, Cart smallCart) {
+	public Bill(String bill_id, String genStaffId, LocalDateTime dateTime, Cart smallCart, double total) {
 		super();
 		this.bill_id = bill_id;
 		this.genStaffId = genStaffId;
 		this.dateTime = dateTime;
 		this.smallCart = smallCart;
+		this.total = total;
 	}
 
-	public Bill(String bill_id, String genStaffId, LocalDateTime dateTime) {
-		super();
-		this.bill_id = bill_id;
-		this.genStaffId = genStaffId;
-		this.dateTime = dateTime;
-	}
+//	public Bill(String bill_id, String genStaffId, LocalDateTime dateTime) {
+//		super();
+//		this.bill_id = bill_id;
+//		this.genStaffId = genStaffId;
+//		this.dateTime = dateTime;
+//	}
 
 	public String getBill_id() {
 		return bill_id;
@@ -58,7 +59,7 @@ public class Bill implements Comparable<Bill>{
 		this.smallCart = smallCart;
 	}
 
-	public int getTotal() {
+	public double getTotal() {
 		return total;
 	}
 
