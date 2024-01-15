@@ -28,7 +28,7 @@ public class LocalStaff implements Comparable<LocalStaff>{
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, staffId);
+		return Objects.hash(staffId);
 	}
 
 	@Override

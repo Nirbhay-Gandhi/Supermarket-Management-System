@@ -1,5 +1,7 @@
 package com.modals;
 
+import java.util.Objects;
+
 public class Customer implements Comparable<Customer>{
 
 	private String cust_id;
@@ -26,6 +28,16 @@ public class Customer implements Comparable<Customer>{
 	public int compareTo(Customer o) {
 		
 		return this.cust_id.compareTo(o.cust_id);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return this.cust_id == ((Customer)obj).cust_id;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cust_id);
 	}
 	
 }

@@ -123,7 +123,7 @@ public class BusinessLayer {
 		LocalDate expdt = LocalDate.of(2023, 12, 31);
 		Product prd = new Product(prdId, pname, brand, expdt, price);
 		staffDaoImplementation.addProduct(prd, this.staffId);
-		System.out.println("Product added from business layer");
+		//System.out.println("Product added from business layer");
 	}
 	
 	public void viewProduct(String pname) {

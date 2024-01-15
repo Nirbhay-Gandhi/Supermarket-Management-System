@@ -97,7 +97,7 @@ public class StaffDaoImpl implements StaffDaoIntf{
 		{
 			//adding a fresh product
 			ds.productInventory.add(p);	
-			System.out.println("In Dao layer. size: "+ds.productInventory.size());
+			//System.out.println("In Dao layer. size: "+ds.productInventory.size());
 		}
 		
 		//update the quantity

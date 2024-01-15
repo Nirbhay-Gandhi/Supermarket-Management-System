@@ -70,7 +70,7 @@ public class Product implements Comparable<Product>{
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(brand, product_name);
+		return Objects.hash(product_name);
 	}
 
 	@Override
