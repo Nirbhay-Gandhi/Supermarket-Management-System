@@ -1,0 +1,9 @@
+#Release notes
+Major.Minor.Patch:
+-------------------
+Major: Significant, usually backward-incompatible changes.
+Minor: New features or enhancements that are backward-compatible.
+Patch: Bug fixes or minor improvements that are backward-compatible.
+For example, version 2.5.1 indicates a major version 2, minor version 5, and patch version 1
+
+v-1.0.0 : testing admin api : add product, view productinventory, remove product, view inventory 
